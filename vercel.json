@@ -1,0 +1,6 @@
+{
+    "redirects": [
+      { "source": "/", "destination": "/tela_inicial.html", "permanent": true }
+    ]
+}
+  
