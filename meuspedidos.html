@@ -1,0 +1,30 @@
+<header>
+    <h1>Loja First Place</h1>
+    <nav class="menu">
+        <ul>
+            <li><a href="#" onclick="mostrarTelaPedidos()">Meus Pedidos</a></li>
+            <li><a href="#">Listar Pedidos</a></li>
+            <li><a href="#">Criar Pedido</a></li>
+            <li><a href="#">Listar Usuários</a></li>
+            <li><a href="#">Criar Usuário</a></li>
+        </ul>
+    </nav>
+    <!-- Barra de busca -->
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar produtos..." id="search-input">
+        <button onclick="searchProducts()">Pesquisar</button>
+    </div>
+    <!-- Carrinho -->
+    <div class="carrinho">
+        <button onclick="mostrarCarrinho()">Carrinho (<span id="qtd-carrinho">0</span>)</button>
+    </div>
+</header>
+
+<!-- Tela de Meus Pedidos -->
+<div id="tela-pedidos" style="display:none; padding: 20px;">
+    <h2>Meus Pedidos</h2>
+    <div id="lista-pedidos">
+        <p>Não há produtos no carrinho.</p>
+    </div>
+    <button onclick="voltarParaCarrinho()">Voltar para o carrinho</button>
+</div>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fundo futurista com gradiente */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #08f954, #00d404a1); /* Gradiente de azul */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Título */
+        h2 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        /* Estilo do formulário */
+        form {
+            background-color: rgba(221, 221, 221, 0.618);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(2, 0, 0, 0.86);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            color: aliceblue;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #00c6ff;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.445);
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #2fff00;
+            outline: none;
+        }
+
+        /* Estilo dos botões */
+        button {
+            background-color: #000000; /* Cor de fundo preta */
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: 2px solid #00ff22;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: rgba(4, 171, 49, 0.86); /* Fundo preto já é o padrão, pode manter */
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(30, 255, 0, 0.7);
+        }
+
+        /* Mensagem de feedback */
+        #message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Cadastre-se</h2>
+    <form id="addUserForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+        
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+        
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        
+        <button type="submit">Criar Usuário</button>
+    </form>
+    <p id="message"></p> <!-- Mensagem de feedback -->
+
+    <script>
+        // Função para adicionar um usuário ao Local Storage
+        document.getElementById("addUserForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita o envio do formulário
+    
+            // Captura os dados do formulário
+            const nome = document.getElementById("nome").value;
+            const cpf = document.getElementById("cpf").value;
+            const login = document.getElementById("login").value;
+            const senha = document.getElementById("senha").value;
+    
+            // Cria um objeto usuário
+            const novoUsuario = {
+                nome: nome,
+                cpf: cpf,
+                login: login,
+                senha: senha
+            };
+    
+            // Obtém a lista de usuários armazenada no Local Storage (ou cria uma lista vazia, se não houver)
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    
+            // Adiciona o novo usuário à lista
+            usuarios.push(novoUsuario);
+    
+            // Salva a lista de usuários no Local Storage
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    
+            // Exibe uma mensagem de sucesso
+            const messageElement = document.getElementById("message");
+            messageElement.innerText = "Usuário cadastrado com sucesso!";
+    
+            // Limpa os campos do formulário
+            document.getElementById("addUserForm").reset();
+
+            window.location.href = 'login.html'; // Redireciona para a página de loja
+        });
+    </script>
+</body>
+
+</html>

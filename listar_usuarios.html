@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Usuários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Listar Usuários</h1>
+        <nav>
+            <ul>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="criar_usuario.html">Criar Usuário</a></li>
+                <li><a href="listar_pedidos.html">Listar Pedidos</a></li>
+                <li><a href="criar_pedido.html">Criar Pedido</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Usuários Cadastrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Login</th>
+                    <th>Senha</th>
+                </tr>
+            </thead>
+            <tbody id="usuarios-tabela">
+                
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Seu Sistema. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+   
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const tabela = document.getElementById("usuarios-tabela");
+
+   
+    if (usuarios.length > 0) {
+        usuarios.forEach(usuario => {
+            const row = document.createElement("tr");
+
+        
+            row.innerHTML = `
+                <td>${usuario.nome}</td>
+                <td>${usuario.cpf}</td>
+                <td>${usuario.login}</td>
+                <td>${usuario.senha}</td>
+            `;
+
+            // Adiciona a linha à tabela
+            tabela.appendChild(row);
+        });
+    } else {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td colspan="4">Nenhum usuário encontrado.</td>`;
+        tabela.appendChild(row);
+    }
+});
+
+    </script>
+</body>
+</html>

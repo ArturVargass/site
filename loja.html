@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="lojaestilo.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Loja First Place</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="criar_usuario.html">Criar Usuário</a></li>
+                <li><a href="listar_usuarios.html">Listar Usuário</a></li>
+                <li><a href="listar_pedidos.html">Listar Pedidos</a></li>
+                <li><a href="criar_pedido.html">Criar Pedido</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+        <!-- Barra de busca -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos..." id="search-input">
+            <button onclick="searchProducts()">Pesquisar</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h2>Bem-vindo a loja First Place!</h2>
+        
+        <p>Utilize o menu acima para navegar entre as opções.</p>
+
+        <!-- Lista de produtos -->
+        <section class="product-list">
+            <div class="product-card">
+                <img src="3090.jpg" alt="Produto 1">
+                <h3>GeForce RTX™ 3090 GAMING OC 24G</h3>
+                <p>R$ 9.359,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="gabinete.jpg" alt="Produto 2">
+                <h3>Gabinete Gamer Hyte Y70 Touch</h3>
+                <p>R$ 3.999,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="watercooler.jpg" alt="Produto 3">
+                <h3>Water Cooler RGB Lunara</h3>
+                <p>R$ 509,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="image.png" alt="Produto 4">
+                <h3>Cadeira Gamer Herman Miller</h3>
+                <p>R$ 12.999,00</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="pc-pichau-ward-v2-preto-media-008.jpg" alt="Produto 5">
+                <h3>PC Gamer, AMD Ryzen 5 5600, GeForce RTX 4060 8GB, 16GB RAM</h3>
+                <p>R$ 5.199,94</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Novos produtos adicionados -->
+            <div class="product-card">
+                <img src="download.jpg" alt="Produto 6">
+                <h3>Monitor 4K Ultra HD 27"</h3>
+                <p>R$ 2.199,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="download (1).jpg" alt="Produto 7">
+                <h3>Teclado Mecânico RGB</h3>
+                <p>R$ 599,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="download (2).jpg" alt="Produto 8">
+                <h3>Mouse Gamer Logitech G502</h3>
+                <p>R$ 349,99</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="download (3).jpg" alt="Produto 9">
+                <h3>Fone de Ouvido SteelSeries Arctis 7</h3>
+                <p>R$ 1.099,00</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="bx8071514600kf.jpg" alt="Produto 10">
+                <h3>Processador Intel Core i5-14600KF</h3>
+                <p>R$ 1.299,00</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+        </section>
+    </main>
+    <script src="loja.js"></script>
+</body>
+</html>

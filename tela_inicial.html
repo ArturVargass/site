@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Acesso</title>
+    <style>
+        /* Fundo futurista com gradiente */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #00ff5e, #00891e); /* Gradiente de azul */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Container para a foto */
+        .photo-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #00c6ff;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Título simples */
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: none;
+        }
+
+        /* Estilo dos botões futuristas */
+        button {
+            background-color: rgba(0, 0, 0, 0.1); /* Fundo transparente com leve branco */
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            margin: 15px;
+            cursor: pointer;
+            border: 2px solid #000000;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: rgba(0, 200, 255, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgb(0, 200, 255);
+        }
+
+        /* Efeito de animação nos botões */
+        button:focus {
+            outline: none;
+        }
+
+        /* Adicionando sombra no body */
+        body {
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Container para a foto -->
+    <div class="photo-container">
+        <img src="img.png" alt="Foto de Perfil">
+    </div>
+
+    <h1>Seja bem-vindo ao First Place</h1>
+    <button onclick="navigateTo('registro_conta.html')">Registrar Conta</button>
+    <button onclick="navigateTo('login.html')">Realizar Login</button>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>
