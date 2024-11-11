@@ -17,7 +17,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #4CAF50; /* Verde neon */
+    background: linear-gradient(135deg, #920eea, #000a02); /* Verde neon */
     color: white;
     padding: 20px;
     text-align: center;
@@ -25,7 +25,7 @@ header {
 
 header h1 {
     font-size: 2em;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -38,7 +38,7 @@ header .menu ul {
 
 header .menu a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
 }
 

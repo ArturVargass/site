@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Usuário</title>
+    <title>Criar conta</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Fundo futurista com gradiente */
         body {
             margin: 0;
             height: 100vh;
-            background: linear-gradient(135deg, #08f954, #00d404a1); /* Gradiente de azul */
+            background: linear-gradient(135deg, #920eea, #000a02); /* Gradiente de azul */
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
@@ -23,6 +23,13 @@
         }
 
         /* Título */
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+        }
         h2 {
             font-size: 3.5em;
             font-weight: bold;
@@ -71,7 +78,6 @@
             font-size: 18px;
             font-weight: bold;
             padding: 15px 30px;
-            border: 2px solid #00ff22;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -80,9 +86,9 @@
         }
 
         button:hover {
-            background-color: rgba(4, 171, 49, 0.86); /* Fundo preto já é o padrão, pode manter */
+            background-color: #920eea; /* Fundo preto já é o padrão, pode manter */
             transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(30, 255, 0, 0.7);
+            box-shadow: 0px 0px 20px #920eea;
         }
 
         /* Mensagem de feedback */
@@ -97,7 +103,7 @@
 </head>
 
 <body>
-    <h2>Cadastre-se</h2>
+    <h1>Cadastre-se</h1>
     <form id="addUserForm">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>

@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    background: linear-gradient(to right, #4CAF50, #388E3C); /* Gradiente verde */
+    background: linear-gradient(135deg, #920eea, #000a02); /* Gradiente verde */
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #A5D6A7; /* Cor de destaque para hover */
+    background: linear-gradient(135deg, #920eea, #000a02); /* Cor de destaque para hover */
 }
 
 main {
@@ -56,7 +56,6 @@ main {
 
 h2 {
     text-align: center;
-    color: #388E3C; /* Verde escuro */
     margin-bottom: 20px;
 }
 
@@ -72,7 +71,7 @@ form {
 form label {
     display: block;
     margin: 15px 0 5px;
-    color: #333;
+    
 }
 
 form input, form textarea {
@@ -84,14 +83,14 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-color: #4CAF50; /* Verde claro para foco */
+    border-color: #333; /* Verde claro para foco */
     outline: none;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Sombra verde clara */
 }
 
 button {
     align-items: center;
-    background: #4CAF50; /* Verde principal */
+    background: #000000; /* Verde principal */
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -134,7 +133,7 @@ table tbody tr:hover {
 }
 
 footer {
-    background: #2C6B2F; /* Verde escuro */
+    background: #000000; /* Verde escuro */
     color: #fff;
     text-align: center;
     padding: 15px 0;
