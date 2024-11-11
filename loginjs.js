@@ -24,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (usuarioValido) {
         // Se o login for válido, redireciona para a página inicial
-        window.location.href = "index.html";
+        window.location.href = "loja.html";
     } else {
         // Se o login ou senha estiver errado, exibe uma mensagem
         alert("Login ou senha inválidos!");
